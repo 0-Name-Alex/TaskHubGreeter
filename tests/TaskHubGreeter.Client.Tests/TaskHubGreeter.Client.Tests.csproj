@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <!-- Test method names use underscores; async void-free tests. -->
+    <NoWarn>$(NoWarn);CA1707;CA2000;CA1001;xUnit1031</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Kestrel is used as the fake TaskHub server (real HTTP + WebSocket on 127.0.0.1). -->
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\TaskHubGreeter.Client\TaskHubGreeter.Client.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+*.user
+artifacts/
+TestResults/
+build-log.txt
+.transfer/

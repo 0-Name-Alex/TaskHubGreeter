@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TaskHubGreeter.Client/TaskHubGreeter.Client.csproj" />
+    <Project Path="src/TaskHubGreeter.App/TaskHubGreeter.App.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TaskHubGreeter.Client.Tests/TaskHubGreeter.Client.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path="build.ps1" />
+    <File Path="build.cmd" />
+    <File Path="README.md" />
+  </Folder>
+</Solution>

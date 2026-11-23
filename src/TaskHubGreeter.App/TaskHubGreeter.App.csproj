@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>TaskHubGreeter</AssemblyName>
+    <RootNamespace>TaskHubGreeter.App</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\Greeter.ico</ApplicationIcon>
+    <!-- WPF0001: Fluent ThemeMode is marked experimental. SYSLIB1054: plain DllImport is fine here. -->
+    <NoWarn>$(NoWarn);WPF0001;SYSLIB1054;CA1401;CA5392;CA1838</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Greeter.ico" />
+  </ItemGroup>
+
+  <!-- WPF projects leave System.IO out of the implicit usings (Path clashes with Shapes.Path). -->
+  <ItemGroup>
+    <Using Include="System.IO" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaskHubGreeter.Client\TaskHubGreeter.Client.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="H.NotifyIcon.Wpf" />
+  </ItemGroup>
+</Project>
